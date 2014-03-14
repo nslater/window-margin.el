@@ -31,7 +31,7 @@
 ;;
 ;; To enable it with text-mode use:
 ;;
-;;   (add-hook 'text-mode 'turn-on-window-margin-mode)
+;;   (add-hook 'text-mode-hook 'turn-on-window-margin-mode)
 ;;
 ;; This minor mode was inspired by reading an entry on StackOverflow
 ;;
@@ -59,7 +59,7 @@ percentage of the frame width.")
 (make-local-variable 'window-margin-width)
 (setq-default window-margin-width nil)
 
-(defcustom window-margin-mode-line-string " wm"
+(defcustom window-margin-mode-line-string " Margin"
   "String displayed on the modeline when window-margin is active.
 Set this to nil if you don't want a modeline indicator."
   :group 'window-margin
